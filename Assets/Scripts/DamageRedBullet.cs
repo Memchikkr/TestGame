@@ -15,6 +15,11 @@ public class DamageRedBullet : MonoBehaviour
         if (playerHealth != null)
         {
             playerHealth.TakeDamage(damageAmount);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 }

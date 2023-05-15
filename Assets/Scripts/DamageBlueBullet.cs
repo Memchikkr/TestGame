@@ -15,6 +15,11 @@ public class DamageBlueBullet : MonoBehaviour
         if (enemyHealth != null)
         {
             enemyHealth.TakeDamage(damageAmount);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 }

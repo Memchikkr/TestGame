@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] private float maxHealth = 100f;
-
+    [SerializeField] 
+    private float maxHealth = 100f;
+    [SerializeField]
     private float currentHealth;
-
-    private event System.Action OnDeath;
+    private event System.Action onDeath;
 
     private void Start()
     {
@@ -25,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {
-        OnDeath?.Invoke();
+        onDeath?.Invoke();
 
         Destroy(gameObject);
     }
